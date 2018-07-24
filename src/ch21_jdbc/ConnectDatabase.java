@@ -11,6 +11,9 @@ public class ConnectDatabase {
 		String url="jdbc:mysql://localhost:3308/java"; //연결문자열
 		String id="root"; //mysql 접속 아이디
 		String password="1234"; //mysql 접속 비밀번호
+//		String url="jdbc:mysql://localhost/java"; //연결문자열
+//		String id="java"; //mysql 접속 아이디
+//		String password="java1234"; //mysql 접속 비밀번호
 		Connection conn=null; //DB접속처리
 		Statement stmt=null; //sql실행
 		ResultSet rs=null; //레코드 탐색
