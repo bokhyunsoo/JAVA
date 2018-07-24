@@ -12,7 +12,7 @@ public class DB {
 		Connection conn=null;
 		try {
 			FileInputStream fis=
-					new FileInputStream("C:\\Users\\bok\\Desktop\\java_tutorials\\db.prop");
+					new FileInputStream("C:\\Users\\bok\\Desktop\\java_tutorials\\hr.prop");
 			//key와 value를 세트로 저장
 			Properties prop=new Properties();
 			prop.load(fis);
@@ -32,7 +32,7 @@ public class DB {
 		Connection conn=null;
 		try {
 			FileInputStream fis=
-					new FileInputStream("d:\\work\\oracle.prop");
+					new FileInputStream("C:\\Users\\bok\\Desktop\\java_tutorials\\oracle.prop");
 			//key와 value를 세트로 저장
 			Properties prop=new Properties();
 			prop.load(fis);

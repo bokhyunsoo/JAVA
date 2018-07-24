@@ -273,7 +273,7 @@ public class ScoreList extends JFrame {
 		tfStudentNo.setEditable(true);
 	}
 	public void list(){
-		model=new DefaultTableModel(dao.listScore(), col){
+		model=new DefaultTableModel(dao.searchScore(""), col){
 			@Override
 			public boolean isCellEditable(int row, int column) {
 				return false;

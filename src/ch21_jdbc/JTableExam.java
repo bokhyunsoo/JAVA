@@ -61,7 +61,7 @@ public class JTableExam extends JFrame {
 		//테이블에 입력될 데이터 모델 생성
 //new DefaultTableModel( rows, cols )		
 		DefaultTableModel model
-=new DefaultTableModel(dao.listScore(), col){
+=new DefaultTableModel(dao.searchScore(""), col){
 			@Override
 			public boolean isCellEditable(int row, int column) {
 //셀 편집이 안되도록 변경				

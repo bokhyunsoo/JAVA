@@ -155,52 +155,52 @@ public class ScoreDAO {
 	}
 	
 // JTable에 전달할 벡터 데이터 리턴	
-	public Vector listScore(){
-		Vector items=new Vector();
-		Connection conn=null;
-		PreparedStatement pstmt=null;
-		ResultSet rs=null;
-		try {
-			conn=DB.dbConn(); //mysql 접속
-			String sql=
-"select student_no,name,kor,eng,mat "
-+",(kor+eng+mat) tot, round(((kor+eng+mat)/3.0),1) avg"
-+" from score order by name";
-			System.out.println(sql);
-			pstmt = conn.prepareStatement(sql);
-			rs = pstmt.executeQuery(); //sql 실행
-			while(rs.next()){ //다음 레코드가 존재하면
-				Vector row=new Vector();
-				row.add(rs.getString("student_no"));
-				row.add(rs.getString("name"));
-				row.add(rs.getInt("kor"));
-				row.add(rs.getInt("eng"));
-				row.add(rs.getInt("mat"));
-				row.add(rs.getInt("tot"));
-				row.add(rs.getDouble("avg"));
-				items.add(row); //레코드 1개를 벡터에 추가
-			}
-		} catch (Exception e) {
-			e.printStackTrace();
-		} finally {
-			try {
-				if(rs!=null) rs.close();
-			} catch (SQLException e) {
-				e.printStackTrace();
-			}
-			try {
-				if(pstmt!=null) pstmt.close();
-			} catch (SQLException e) {
-				e.printStackTrace();
-			}
-			try {
-				if(conn!=null) conn.close();
-			} catch (SQLException e) {
-				e.printStackTrace();
-			}
-		}
-		return items;
-	}
+//	public Vector listScore(){
+//		Vector items=new Vector();
+//		Connection conn=null;
+//		PreparedStatement pstmt=null;
+//		ResultSet rs=null;
+//		try {
+//			conn=DB.dbConn(); //mysql 접속
+//			String sql=
+//"select student_no,name,kor,eng,mat "
+//+",(kor+eng+mat) tot, round(((kor+eng+mat)/3.0),1) avg"
+//+" from score order by name";
+//			System.out.println(sql);
+//			pstmt = conn.prepareStatement(sql);
+//			rs = pstmt.executeQuery(); //sql 실행
+//			while(rs.next()){ //다음 레코드가 존재하면
+//				Vector row=new Vector();
+//				row.add(rs.getString("student_no"));
+//				row.add(rs.getString("name"));
+//				row.add(rs.getInt("kor"));
+//				row.add(rs.getInt("eng"));
+//				row.add(rs.getInt("mat"));
+//				row.add(rs.getInt("tot"));
+//				row.add(rs.getDouble("avg"));
+//				items.add(row); //레코드 1개를 벡터에 추가
+//			}
+//		} catch (Exception e) {
+//			e.printStackTrace();
+//		} finally {
+//			try {
+//				if(rs!=null) rs.close();
+//			} catch (SQLException e) {
+//				e.printStackTrace();
+//			}
+//			try {
+//				if(pstmt!=null) pstmt.close();
+//			} catch (SQLException e) {
+//				e.printStackTrace();
+//			}
+//			try {
+//				if(conn!=null) conn.close();
+//			} catch (SQLException e) {
+//				e.printStackTrace();
+//			}
+//		}
+//		return items;
+//	}
 }
 
 
