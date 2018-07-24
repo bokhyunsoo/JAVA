@@ -111,7 +111,6 @@ public class ScoreList extends JFrame {
 		contentPane.add(lblNewLabel);
 		
 		tfStudentNo = new JTextField();
-		tfStudentNo.setEditable(false);
 		tfStudentNo.setBounds(61, 7, 116, 21);
 		contentPane.add(tfStudentNo);
 		tfStudentNo.setColumns(10);
